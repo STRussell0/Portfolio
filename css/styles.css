@@ -1,0 +1,103 @@
+body, html {
+    height: 100%;
+}
+
+.jumbotron {
+    background-color: #989ea3;
+}
+
+.parallax-1, .parallax-2, .parallax-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .65;
+}
+
+.parallax-1 {
+    background-image: url(../images/tortoise-1.jpg);
+    height: 60%;
+}
+
+.parallax-2 {
+    background-image: url(../images/coding.jpg);
+    height: 30%;
+}
+
+.parallax-3 {
+    background-image: url(../images/contact.jpg);
+    height: 30%;
+}
+
+h1, h4 {
+    font-family: "Ruda", sans-serif;
+}
+
+p, li, h3 {
+    font-family: "Roboto Slab", serif;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+}
+
+.about-me {
+    text-align: left;
+}
+
+.about-me-list-left {
+    list-style-type: none;
+    text-align: right;
+}
+
+.about-me-list {
+    list-style-type: none;
+    text-align: left;
+}
+
+#profile {
+    height: 400px;
+    width: 300px;
+}
+
+img {
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.425)
+}
+
+.nav-item {
+    color: black;
+}
+
+li {
+    margin: 5px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+footer {
+    background-color: #989ea3;
+    text-align: center;
+}
+
+.fa:hover {
+    color: red;
+}
+
+.carousel-caption {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+@media only screen and (max-width: 900px) {
+    .parallax-1, .parallax-2, .parallax-3 {
+        background-attachment: scroll;
+    }
+}
