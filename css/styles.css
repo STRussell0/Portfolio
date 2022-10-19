@@ -1,5 +1,6 @@
 body, html {
     height: 100%;
+    overflow-x: hidden;
 }
 
 .jumbotron {
@@ -41,13 +42,13 @@ p, li, h3 {
     margin-bottom: 0;
 }
 
-.about-me {
+/* .about-me {
     text-align: left;
-}
+} */
 
 .about-me-list-left {
     list-style-type: none;
-    text-align: right;
+    text-align: left;
 }
 
 .about-me-list {
@@ -56,8 +57,8 @@ p, li, h3 {
 }
 
 #profile {
-    height: 400px;
-    width: 300px;
+    height: 800px;
+    width: 600px;
 }
 
 img {
