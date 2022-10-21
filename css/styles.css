@@ -71,6 +71,10 @@ img {
     justify-content: space-between;
 }
 
+.carousel-item {
+    margin-bottom: 5rem;
+}
+
 .nav-item {
     color: black;
 }
