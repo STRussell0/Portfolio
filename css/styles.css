@@ -1,33 +1,21 @@
 body, html {
     height: 100%;
     overflow-x: hidden;
+    color: #309156;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border: none;
+}
+
+.navbar {
+    background-color: #1A2715;
 }
 
 .jumbotron {
-    background-color: #989ea3;
-}
-
-.parallax-1, .parallax-2, .parallax-3 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: .65;
-}
-
-.parallax-1 {
-    background-image: url(../images/tortoise-1.jpg);
-    height: 60%;
-}
-
-.parallax-2 {
-    background-image: url(../images/coding.jpg);
-    height: 30%;
-}
-
-.parallax-3 {
-    background-image: url(../images/contact.jpg);
-    height: 30%;
+    background-color: #1A2715;
 }
 
 h1, h4 {
@@ -40,6 +28,10 @@ p, li, h3 {
 
 .jumbotron {
     margin-bottom: 0;
+}
+
+.about-section {
+    margin-top: 5rem;
 }
 
 .about-me-list-left {
@@ -92,7 +84,7 @@ a:hover {
 }
 
 footer {
-    background-color: #989ea3;
+    background-color: #1A2715;
     text-align: center;
 }
 
