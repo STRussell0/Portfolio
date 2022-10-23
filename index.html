@@ -15,7 +15,7 @@
   </head>
   <body>
 <!-- NAVBAR - Added fixed top to keep it stuck to the top -->
-    <header class="fixed-top mb-5">
+    <header>
 
       <nav class="navbar navbar-expand-sm navbar-dark">
 
@@ -29,21 +29,31 @@
 
           <div class="navbar-nav">
 <!-- Put links to IDs used later to navigate to them when pressed -->
-            <a class="nav-item nav-link font-weight-bold" href="#Top">Top</a>
             <a class="nav-item nav-link font-weight-bold" href="#About">About</a>
-            <a class="nav-item nav-link font-weight-bold" href="#Skills">Skills</a>
-            <a class="nav-item nav-link font-weight-bold" href="#Projects">Projects</a>
-            <!-- <a class="nav-item nav-link font-weight-bold" href="#Contact">Contact</a> -->
+            <a class="nav-item nav-link font-weight-bold" href="#Skills">Experience</a>
+            <a class="nav-item nav-link font-weight-bold" href="#Projects">Work</a>
+            <a class="nav-item nav-link font-weight-bold" href="#Contact">Contact</a>
 
           </div>
 
         </div>
-
+        <div class="resume-link-container">
+          <a class="nav-link font-weight-bold resume-link" href="./Stephen_Russell_Resume.pdf" download>Resume</a>
+        </div>
         <a class="navbar-brand text-dark font-weight-bold" href="#"><img class="logo" src="./images/SR-logo-2.png" alt="logo"></a>
 
       </nav>
 
     </header>
+
+    <section class="jumbotron" id="Title">
+      <div class="container">
+        <div><h3 class="title-hello">Hello, my name is</h3></div>
+        <div class="mt-4"><h1 class="title-name">Stephen Russell.</h1></div>
+        <div class="mt-2 text-center"><h1 class="title-name subtitle">I am a Web Developer.</h1></div>
+        <div class="ml-auto mt-2 text-right title-desc"><p class="lead">I am a LAMP stack web developer that focuses on Wordpress website and plugin development. I am currently an apprentice at Alpha Works, a subsidiary of Bitwise Industries.</p></div>
+      </div>
+    </section>
 
     <!-- ABOUT ME SECTION  -->
 
@@ -274,6 +284,21 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script>
+
+      const nav = document.querySelector(".navbar");
+      let lastScrollY = window.scrollY;
+      window.addEventListener("scroll", () => {
+        if (lastScrollY < window.scrollY) {
+          console.log("Hello");
+          nav.classList.add("nav--hidden");
+        } else {
+          console.log ("Goodbye");
+          nav.classList.remove("nav--hidden");
+        }
+
+        lastScrollY = window.scrollY;
+      });
+
         $('.navbar-collapse a').click(function(){
             $(".navbar-collapse").collapse('hide');
         });

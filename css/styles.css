@@ -1,7 +1,12 @@
-body, html {
+body {
+    --nav-height: 60px;
+    --fs-sm: 14px;
+    --fs-md: 16px;
+    padding-top: var(--nav-height);
     height: 100%;
-    overflow-x: hidden;
-    color: #309156;
+    /* overflow-x: hidden; */
+    color: #77af8d;
+    background-color: #1A2715;
 }
 
 .logo {
@@ -11,7 +16,59 @@ body, html {
 }
 
 .navbar {
-    background-color: #1A2715;
+    width: 100%;
+    height: var(--nav-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #1A271585;
+    font-family: "Roboto Slab";
+    transition: transform 0.2s;
+    z-index: 1;
+    box-shadow: 0 10px 30px -10px #142019b3;
+    backdrop-filter: blur(10px);
+}
+
+.nav--hidden {
+    transform: translateY(calc(-1 * var(--nav-height)));
+}
+
+.nav-item {
+    color: #cde9cd!important;
+}
+
+.resume-link-container {
+    border: 1px solid;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+.resume-link {
+    color: #cde9cd;
+}
+
+.resume-link:hover {
+    color: #77af8d;
+}
+
+.title-hello {
+    color: #309156;
+    font-size: clamp(var(--fs-sm),5vw,var(--fs-md))
+}
+
+.title-name {
+    color: #a0ebbe;
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 900;
+}
+
+.subtitle {
+    font-size: clamp(30px, 8vw, 60px);
+    color: #77af8d;
+}
+
+.title-desc {
+    max-width: 500px;
 }
 
 .jumbotron {
