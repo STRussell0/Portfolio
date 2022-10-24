@@ -117,7 +117,7 @@ body {
 
 .title-hello {
     color: #309156;
-    font-size: clamp(var(--fs-sm),5vw,var(--fs-md))
+    font-size: clamp(var(--fs-sm),5vw,var(--fs-md));
 }
 
 .title-name {
@@ -302,8 +302,7 @@ a h5 {
 .btn-success {
     background-color: #64c78b;
     color: #141815;
-    width: 25%;
-    font-size: var(--fs-md);
+    font-size: clamp(var(--fs-sm),5vw,var(--fs-md));
     font-family: "Roboto Slab";
 }
 
