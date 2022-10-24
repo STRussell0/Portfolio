@@ -29,18 +29,17 @@
 
           <div class="navbar-nav">
 <!-- Put links to IDs used later to navigate to them when pressed -->
-            <a class="nav-item nav-link font-weight-bold" href="#About">About</a>
-            <a class="nav-item nav-link font-weight-bold" href="#Skills">Experience</a>
-            <a class="nav-item nav-link font-weight-bold" href="#Projects">Work</a>
-            <a class="nav-item nav-link font-weight-bold" href="#Contact">Contact</a>
-
+            <a class="nav-item nav-link font-weight-bold" href="#about">About</a>
+            <a class="nav-item nav-link font-weight-bold" href="#skills">Experience</a>
+            <a class="nav-item nav-link font-weight-bold" href="#projects">Work</a>
+            <a class="nav-item nav-link font-weight-bold" href="#contact">Contact</a>
           </div>
 
         </div>
         <div class="resume-link-container">
           <a class="nav-link font-weight-bold resume-link" href="./Stephen_Russell_Resume.pdf" download>Resume</a>
         </div>
-        <a class="navbar-brand text-dark font-weight-bold" href="#"><img class="logo" src="./images/SR-logo-2.png" alt="logo"></a>
+        <a class="navbar-brand text-dark font-weight-bold" href="https://strussell0.github.io/Portfolio/"><img class="logo" src="./images/SR-logo-2.png" alt="logo"></a>
 
       </nav>
 
@@ -57,9 +56,7 @@
 
     <!-- ABOUT ME SECTION  -->
 
-    <section class="jumbotron text-center" id="About">
-
-      
+    <section class="jumbotron text-center" id="about">
 
       <div class="container about-section">
 
@@ -70,7 +67,7 @@
             <img class="img-fluid" src="./images/profile-1.jpg" alt="Picture of Stephen" id="profile">
           </div>
 
-          <div class="col-md">
+          <div class="col-lg about-desc">
             <p class="lead">Hi there! My name is Stephen and I make websites for a living! I have had an interest in web development since I was a freshman in high school when I took my computer skills class. It wasn't until April 2021 that I would actually begin to take it seriously after my partner showed me there were easily accessible online courses that could propel me forward in the tech industry!</p>
             <p class="lead">After taking a couple courses, I was lucky enough to be accepted into Bitwise Industries' apprenticeship program to become a Wordpress developer and it has been an incredible journey.</p>
             <p class="lead">I have had the opportunity to develop and design websites and plugins that were used with Wordpress by using a combination of JavaScript, PHP and jQuery.  I consider myself a great team player with excellent analytical skills and the ability to function well in fast-paced environments.
@@ -84,82 +81,50 @@
 
     <!-- SKILLS SECTION  -->
 
-    <section class="jumbotron" id="Skills">
+    <section class="jumbotron" id="skills">
 
-      <h1 class="display-4 pb-4 text-center"><strong>Experience</strong></h1>
-
-      <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators bg-dark">
-          <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container" style="margin-bottom: 5rem;">
-              <div class="row">   
-                <div class="col-xl-6 col-md">
-                  <img src="./images/Experience.png" alt="Skill Logos" class="img-fluid">
-                </div>
-                <div class="col-md">
-                  <ul class="skills-list">
-                    <li><b>Wordpress Plugin Development</b></li>
-                    <li><b>PHP</b></li>
-                    <li><b>Javascript</b></li>
-                    <li><b>HTML</b></li>
-                    <li><b>CSS</b></li>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div>
+            <h2 class="section-title">Experience</h2>
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-item nav-link active" data-toggle="tab" aria-current="page" href="#alpha_works">Alpha Works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item nav-link" data-toggle="tab" href="#brownie_baker">Brownie Baker</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div id="alpha_works" class="tab-pane active container mt-3">
+                <p class="lead">Alphaworks is a subsidiary company to Bitwise Industries that specializes in giving people looking to break into the tech industry an
+                  opportunity to work on real projects with a team and learn the field.</p>
+                  <p class="lead">June 2021 - Present</p>
+                  <ul class="job-duties">
+                    <li>Developed and designed many websites with Wordpress</li>
+                    <li>Used a combination of JavaScript, jQuery, PHP, and the Bootstrap framework to create plugins for Wordpress websites</li>
+                    <li>Participated in sprints that used Scrum</li>
+                    <li>Co-taught classes that brought up other students looking to pursue knowledge in web development</li>
                   </ul>
-                </div>
+              </div>
+              <div id="brownie_baker" class="tab-pane container mt-3">
+                <p class="lead">The Brownie Baker is a wholesale manufacturer, specializing in the distribution of prepackaged pastries.</p>
+                  <p class="lead">June 2016 - June 2021</p>
+                  <ul class="job-duties">
+                    <li>Managed a team of quality technicians</li>
+                    <li>Ensured products were safe by testing for pathogens, pH levels, water activity and moisture levels</li>
+                  </ul>
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="carousel-caption d-none d-md-block bg-dark">
-              <h5>Scrum is a simple framework for effective team collaboration on complex software projects.</h5></a>
-            </div>
-            <img class="d-block w-100" src="./images/Scrum_Framework.png" alt="Second slide">
-          </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
-
-      <!-- <div class="container">
-
-        <h1 class="display-4 pb-4 text-center"><strong>Experience</strong></h1>
-
-        <div class="row">
-
-          <div class="col-xl-6 col-md">
-            <img src="./images/Experience.png" alt="Skill Logos" class="img-fluid">
-          </div>
-
-          <div class="col-md">
-            <ul class="skills-list">
-              <li><b>Wordpress Plugin Development</b></li>
-              <li><b>PHP</b></li>
-              <li><b>Javascript</b></li>
-              <li><b>HTML</b></li>
-              <li><b>CSS</b></li>
-            </ul>
-          </div>
-
-        </div>
-
-      </div> -->
-
-      <hr>
 
     </section>
 
     <!-- PROJECTS SECTION  -->
 
-    <section class="jumbotron" id="Projects">
+    <section class="jumbotron" id="projects">
 
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators bg-dark">
@@ -263,7 +228,16 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script>
-
+      // Add smooth transition to anchor tags
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+              e.preventDefault();
+              document.querySelector(this.getAttribute('href')).scrollIntoView({
+                  behavior: 'smooth'
+              });
+          });
+      });
+      // Make nav bar hide when scrolling down and reappear when scrolling up
       const nav = document.querySelector(".navbar");
       let lastScrollY = window.scrollY;
       window.addEventListener("scroll", () => {

@@ -11,6 +11,10 @@ body {
     padding: 20px 30px;
 }
 
+#about {
+    scroll-behavior: smooth;
+}
+
 .logo {
     height: 50px;
     width: 50px;
@@ -36,7 +40,7 @@ body {
 }
 
 .nav-item {
-    color: #cde9cd!important;
+    color: #86aa86!important;
 }
 
 .resume-link-container {
@@ -114,19 +118,14 @@ p, li, h3 {
     margin-top: 5rem;
 }
 
-.about-me-list-left {
-    list-style-type: none;
-    text-align: left;
+.job-duties {
+    padding: .5vw;
 }
 
-.about-me-list {
-    list-style-type: none;
-    text-align: left;
-}
-
-img {
+#profile {
     border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.425)
+    border: 2px solid #a0ebbe;
+    padding: 10px;
 }
 
 .skills-list {
@@ -164,7 +163,7 @@ footer {
 }
 
 .fa:hover {
-    color: red;
+    color: #77af8d;
 }
 
 .carousel-caption {
@@ -185,8 +184,12 @@ a h5 {
     color: #fff;
 }
 
-@media only screen and (max-width: 900px) {
-    .parallax-1, .parallax-2, .parallax-3 {
-        background-attachment: scroll;
+.fa {
+    color: #86aa86;
+}
+
+@media only screen and (max-width: 992px) {
+    .about-desc {
+        margin-top: 25px;
     }
 }
