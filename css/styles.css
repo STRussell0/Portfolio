@@ -39,12 +39,48 @@ body {
     backdrop-filter: blur(10px);
 }
 
+.navbar-1 {
+    width: 100%;
+    height: 25%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #1A271585;
+    font-family: "Roboto Slab";
+    transition: transform 0.2s;
+    z-index: 1;
+    box-shadow: 0 10px 30px -10px #142019b3;
+    backdrop-filter: blur(10px);
+}
+
+.close {
+    font-size: 3rem;
+    color: #fff;
+}
+
 .nav--hidden {
     transform: translateY(calc(-1 * var(--nav-height)));
 }
 
+.hide {
+    display: none;
+}
+
+.disappear {
+    animation: .25s disappear;
+}
+
+@keyframes disappear {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
 .nav-item {
     color: #86aa86!important;
+}
+
+.nav-menu-modal {
+  background-color: #1A2715;  
 }
 
 .resume-link-container {
