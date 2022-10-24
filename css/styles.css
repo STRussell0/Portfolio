@@ -118,6 +118,19 @@ p, li, h3 {
     margin-top: 5rem;
 }
 
+.nav-item {
+    transition: .5s ease;
+}
+
+.tab-pane.active {
+    animation: slide-in .25s ease-out;
+}
+
+@keyframes slide-in {
+    0% { opacity: 0; transform: translateX(100%); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
 .technology-container {
     padding-left: 15px;
     position: relative;
@@ -151,6 +164,11 @@ p, li, h3 {
     transition: .5s ease;
     filter: grayscale(0);
     transform: scale(1.05);
+}
+
+.external-link:hover {
+    transition: .5s ease;
+    transform: translateY(-3px);
 }
 
 .project-row {
