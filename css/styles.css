@@ -21,6 +21,10 @@ body {
     border: none;
 }
 
+.logo:hover {
+    filter: brightness(150%);
+}
+
 .navbar {
     width: 100%;
     height: var(--nav-height);
@@ -55,6 +59,26 @@ body {
 
 .resume-link:hover {
     color: #77af8d;
+}
+
+#title-animate-1 {
+    animation: slide-down 2s ease-out;
+}
+
+@keyframes slide-down {
+    0% { opacity: 0; transform: translateY(100%); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#title-animate-2 {
+    /* opacity: 0; */
+    animation-name: side-slide;
+    animation-duration: 3s;
+    /* animation-delay: s; */
+}
+
+@keyframes side-slide {
+    0% { opacity: 0; transform: translateX(-100%); }
 }
 
 .title-hello {
@@ -123,12 +147,12 @@ p, li, h3 {
 }
 
 .tab-pane.active {
-    animation: slide-in .25s ease-out;
+    animation: slide-in 1s ease-out;
 }
 
 @keyframes slide-in {
-    0% { opacity: 0; transform: translateX(100%); }
-    100% { opacity: 1; transform: translateX(0); }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .technology-container {
@@ -269,5 +293,10 @@ a h5 {
     }
     .technology-list {
         margin-bottom: 0;
+    }
+
+    .project-image {
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 }

@@ -46,9 +46,9 @@
     </header>
 
     <section class="jumbotron" id="Title">
-      <div class="container">
-        <div><h3 class="title-hello">Hello, my name is</h3></div>
-        <div class="mt-4"><h1 class="title-name">Stephen Russell.</h1></div>
+      <div class="container title-section">
+        <div id="title-animate-1"><h3 class="title-hello">Hello, my name is</h3></div>
+        <div id="title-animate-2" class="mt-4"><h1 class="title-name">Stephen Russell.</h1></div>
         <div class="mt-2 text-center"><h1 class="title-name subtitle">I am a Web Developer.</h1></div>
         <div class="ml-auto mt-2 text-right title-desc"><p class="lead">I am a LAMP stack web developer that focuses on Wordpress website and plugin development. I am currently an apprentice at Alpha Works, a subsidiary of Bitwise Industries.</p></div>
       </div>
@@ -56,7 +56,7 @@
 
     <!-- ABOUT ME SECTION  -->
 
-    <section class="jumbotron text-center" id="about">
+    <section class="jumbotron text-center about-me" id="about">
 
       <div class="container about-section">
 
@@ -92,14 +92,14 @@
   </div>
     </section>
 
-    <!-- SKILLS SECTION  -->
+    <!-- EXPERIENCE SECTION  -->
 
-    <section class="jumbotron" id="skills">
+    <section class="jumbotron experience" id="skills">
 
       <div class="container">
         <div class="row justify-content-center">
+          <h2 class="section-title">Experience</h2>
           <div>
-            <h2 class="section-title">Experience</h2>
             <ul class="nav nav-tabs">
               <li class="nav-item">
                 <a class="nav-item nav-link active" data-toggle="tab" aria-current="page" href="#alpha_works">Alpha Works</a>
@@ -137,11 +137,11 @@
 
     <!-- PROJECTS SECTION  -->
 
-    <section class="jumbotron" id="projects">
+    <section class="jumbotron projects" id="projects">
       <div class="container">
         <h2 class="section-title">Projects</h2>
         <div class="project-row">
-          <div class="col-lg-6">
+          <div class="col-lg-6 project-image">
             <a href="#" data-toggle="modal" data-target="#magic8ball-modal"><img class="img-fluid img-border img-gray" src="./images/magic8ball.png" alt="magic 8 ball"></a>
           </div>
           <div class="modal fade" id="magic8ball-modal" tabindex="-1" role="dialog" aria-labelledby="magic8ballLabel" aria-hidden="true">
@@ -162,7 +162,7 @@
                 <li>Bootstrap</li>
               </ul>
             </div>
-            <div class="external-link"><a href="#"><i class="fa fa-external-link fa-lg"></i></a></div>
+            <div class="external-link"><a target="_blank" href="https://strussell0.github.io/Portfolio/"><i class="fa fa-external-link fa-lg"></i></a></div>
           </div>
         </div>
         <div class="project-row">
@@ -183,7 +183,7 @@
             </div>
             <div class="external-link"><a href="#"><i class="fa fa-external-link fa-lg"></i></a></div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 project-image">
             <a href="#" data-toggle="modal" data-target="#alertolite-modal"><img class="img-fluid img-border img-gray" src="./images/alert-o-lite-form.png" alt="alert o lite form"></a>
           </div>
         </div>
@@ -195,7 +195,7 @@
           </div>
         </div>
         <div class="project-row">
-          <div class="col-lg-6">
+          <div class="col-lg-6 project-image">
             <a href="#" data-toggle="modal" data-target="#repair-panel-modal"><img class="img-fluid img-border img-gray" src="./images/repair-request-backend.png" alt="alert o lite repair panel"></a>
           </div>
           <div class="col-lg-6 d-flex flex-column">
@@ -266,7 +266,13 @@
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
     <script>
+
+      window.sr = ScrollReveal();
+      sr.reveal('.about-me')
+      sr.reveal('.experience');
+      sr.reveal('.projects')
       // Add smooth transition to anchor tags
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           anchor.addEventListener('click', function (e) {
