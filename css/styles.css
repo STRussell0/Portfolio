@@ -71,10 +71,8 @@ body {
 }
 
 #title-animate-2 {
-    /* opacity: 0; */
     animation-name: side-slide;
     animation-duration: 3s;
-    /* animation-delay: s; */
 }
 
 @keyframes side-slide {
@@ -306,7 +304,7 @@ a h5 {
 }
 
 @media only screen and (max-width: 576px) {
-    #Title {
+    #title {
        margin-top: 20px;
     }
 }
