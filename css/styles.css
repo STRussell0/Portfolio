@@ -352,7 +352,7 @@ a h5 {
     }
 
     .navbar {
-        height: 80px!important;
+        height: 80px;
         backdrop-filter: blur(100px);
     }
 }

@@ -260,7 +260,7 @@
 
       function navClose () {
         navMenu.classList.remove('show');
-        mainNav.style = 'height: var(--nav-height)';
+        mainNav.style = 'height: 80px!important';
         navEscape.classList.add('hide');
         navButton.classList.remove('hide');
         document.body.style = 'overflow: visible';
@@ -269,7 +269,7 @@
 
       navButton.addEventListener('click', () => {
         navMenu.classList.add('show');
-        mainNav.style = 'height: 100%';
+        mainNav.style = 'height: 100%!important';
         navButton.classList.add('hide');
         navEscape.classList.remove('hide');
         document.body.style = 'overflow: hidden';
