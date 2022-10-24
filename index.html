@@ -263,6 +263,7 @@
         mainNav.style = 'height: var(--nav-height)';
         navEscape.classList.add('hide');
         navButton.classList.remove('hide');
+        document.documentElement.style ='overflow: visible';
         document.body.style = 'overflow: visible';
         navSize.style = 'font-size: 14px';
       }
@@ -272,6 +273,7 @@
         mainNav.style = 'height: 100%!important';
         navButton.classList.add('hide');
         navEscape.classList.remove('hide');
+        document.documentElement.style ='overflow: hidden';
         document.body.style = 'overflow: hidden';
         navSize.style = 'font-size: 28px';
       });
