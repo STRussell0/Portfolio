@@ -344,14 +344,14 @@ a h5 {
     .project-flex-order div:first-child {
         order: 1;
     }
+
+    .navbar {
+        backdrop-filter: blur(100px);
+    }
 }
 
 @media only screen and (max-width: 576px) {
     #title {
        margin-top: 40px;
-    }
-
-    .navbar {
-        backdrop-filter: blur(100px);
     }
 }
