@@ -31,7 +31,7 @@
 <!-- Put links to IDs used later to navigate to them when pressed -->
             <a class="nav-item nav-link font-weight-bold" href="#about">About</a>
             <a class="nav-item nav-link font-weight-bold" href="#skills">Experience</a>
-            <a class="nav-item nav-link font-weight-bold" href="#projects">Work</a>
+            <a class="nav-item nav-link font-weight-bold" href="#projects">Projects</a>
             <a class="nav-item nav-link font-weight-bold" href="#contact">Contact</a>
           </div>
 
@@ -63,20 +63,33 @@
         <div class="row">
           <h2 class="section-title">About Me</h2>
           <div class="col-md">
-            
-            <img class="img-fluid" src="./images/profile-1.jpg" alt="Picture of Stephen" id="profile">
+            <img class="img-fluid img-border" src="./images/profile-1.jpg" alt="Picture of Stephen" id="profile">
           </div>
-
           <div class="col-lg about-desc">
             <p class="lead">Hi there! My name is Stephen and I make websites for a living! I have had an interest in web development since I was a freshman in high school when I took my computer skills class. It wasn't until April 2021 that I would actually begin to take it seriously after my partner showed me there were easily accessible online courses that could propel me forward in the tech industry!</p>
             <p class="lead">After taking a couple courses, I was lucky enough to be accepted into Bitwise Industries' apprenticeship program to become a Wordpress developer and it has been an incredible journey.</p>
             <p class="lead">I have had the opportunity to develop and design websites and plugins that were used with Wordpress by using a combination of JavaScript, PHP and jQuery.  I consider myself a great team player with excellent analytical skills and the ability to function well in fast-paced environments.
-
             </p>
-          </div>
-
       </div>
-
+    </div>
+    <div class="row technology-container">
+      <h2 class="technology-title">My most recent technologies:</h2>
+      <div class="col-lg-3">
+        <ul class="technology-list">
+          <li>PHP</li>
+          <li>JavaScript</li>
+          <li>jQuery</li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <ul class="technology-list">
+          <li>Wordpress</li>
+          <li>AJAX</li>
+          <li>SASS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
     </section>
 
     <!-- SKILLS SECTION  -->
@@ -125,62 +138,85 @@
     <!-- PROJECTS SECTION  -->
 
     <section class="jumbotron" id="projects">
-
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators bg-dark">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="carousel-caption d-none d-md-block bg-dark">
-              <a target="_blank" href="https://strussell0.github.io/magic8ball/"><h5>Magic 8 Ball</h5></a>
-                <h4>Javascript course final project.</h4>
-            </div>
-            <img class="d-block w-100" src="./images/magic8ball.png" alt="First slide">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-row">
+          <div class="col-lg-6">
+            <a href="#" data-toggle="modal" data-target="#magic8ball-modal"><img class="img-fluid img-border" src="./images/magic8ball.png" alt="magic 8 ball"></a>
           </div>
-          <div class="carousel-item">
-            <div class="carousel-caption d-none d-md-block bg-dark">
-              <h5>Alert O Lite Repair Form</h5>
-              <h4>Repair Request form that sends data to the backend that the admin can then approve/deny and set pricing.</h4>
+          <div class="modal fade" id="magic8ball-modal" tabindex="-1" role="dialog" aria-labelledby="magic8ballLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <img class="img-fluid" src="./images/magic8ball.png" alt="full magic 8 ball">
+              </div>
             </div>
-            <img class="d-block w-100" src="./images/alert-o-lite-form.png" alt="Second slide">
           </div>
-          <div class="carousel-item">
-            <div class="carousel-caption d-none d-md-block bg-dark">
-              <h5>Repair Form Backend</h5>
-              <h4>Admin panel that you can approve or deny via bulk actions and set pricing of repair requests.</h4>
+          <div class="col-lg-6">
+            <div><h3 class="title-hello text-center">Magic 8 Ball</h3></div>
+            <div><p class="lead text-center">Final project for JavaScript course taken in June of 2021.</p></div>
+            <div><h6 style="color:#309156;">Technologies used:</h6>
+              <ul class="project-technology-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Bootstrap</li>
+              </ul>
             </div>
-            <img class="d-block w-100" src="./images/repair-request-backend.png" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-caption d-none d-md-block bg-dark">
-              <h5>Gigsite Sponsor Ads</h5>
-              <h4>Created service to allow client sponsors curated ads to appear based on search results.</h4>
-            </div>
-            <img class="d-block w-100 size-fix" src="./images/sponsorresults.png" alt="Third slide">
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-caption d-none d-md-block bg-dark">
-              <a target="_blank" href="https://github.com/general-repositories/pdf2db"><h5>Gigsite PDF Parser</h5></a>
-              <h4>PDF Parser that will allow uploaded intern resume PDF contents to be searchable.</h4>
-            </div>
-            <img class="d-block w-100" src="./images/PDF_Parser.png" alt="Fourth slide">
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+        <div class="project-row">
+          <div class="col-lg-6">
+            <div><h3 class="title-hello text-center">Alert-o-Lite Form</h3></div>
+            <div><p class="lead text-center">Repair Request form that sends data to the backend that the admin can then approve/deny and set pricing.</p></div>
+            <div><h6 style="color:#309156;">Technologies used:</h6>
+              <ul class="project-technology-list">
+                <li>HTML</li>
+                <li>SASS</li>
+                <li>PHP</li>
+                <li>Wordpress</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+                <li>Bootstrap</li>
+                <li>AJAX</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <a href="#" data-toggle="modal" data-target="#alertolite-modal"><img class="img-fluid img-border" src="./images/alert-o-lite-form.png" alt="alert o lite form"></a>
+          </div>
+        </div>
+        <div class="modal fade" id="alertolite-modal" tabindex="-1" role="dialog" aria-labelledby="alertoliteLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <img class="img-fluid" src="./images/alert-o-lite-form.png" alt="full alert o lite form">
+            </div>
+          </div>
+        </div>
+        <div class="project-row">
+          <div class="col-lg-6">
+            <a href="#" data-toggle="modal" data-target="#repair-panel-modal"><img class="img-fluid img-border" src="./images/repair-request-backend.png" alt="alert o lite repair panel"></a>
+          </div>
+          <div class="col-lg-6">
+            <div><h3 class="title-hello text-center">Repair Request Admin Panel</h3></div>
+            <div><p class="lead text-center">Admin panel that you can approve or deny via bulk actions and set pricing of repair requests.</p></div>
+            <div><h6 style="color:#309156;">Technologies used:</h6>
+              <ul class="project-technology-list">
+                <li>PHP</li>
+                <li>Wordpress</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal fade" id="repair-panel-modal" tabindex="-1" role="dialog" aria-labelledby="repair-panelLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <img class="img-fluid" src="./images/repair-request-backend.png" alt="full repair panel form">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
     </section>
 
     <!-- CONTACT SECTION  -->

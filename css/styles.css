@@ -74,7 +74,7 @@ body {
 }
 
 .title-desc {
-    max-width: 500px;
+    max-width: 497px;
 }
 
 .jumbotron {
@@ -118,27 +118,51 @@ p, li, h3 {
     margin-top: 5rem;
 }
 
+.technology-container {
+    padding-left: 15px;
+    position: relative;
+}
+
+.technology-title {
+    font-family: "Roboto Slab", serif;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #309156;
+    font-size: clamp(var(--fs-sm),5vw,var(--fs-md));
+    width: 100%;
+}
+
 .job-duties {
     padding: .5vw;
 }
 
-#profile {
+.img-border {
     border-radius: 5px;
     border: 2px solid #a0ebbe;
     padding: 10px;
 }
 
-.skills-list {
-    list-style-type: none;
-    font-size: 20px;
-    height: 100%;
+.project-row {
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 100px;
 }
 
-.carousel-item {
-    margin-bottom: 5rem;
+.project-technology-list {
+    padding: 0%;
+}
+
+.project-technology-list li {
+    display: block;
+    float: left;
+    font-size: clamp(var(--fs-sm),5vw,var(--fs-md));
+    margin: 10px;
+    margin-left: 0;
 }
 
 .nav-item {
@@ -188,8 +212,34 @@ a h5 {
     color: #86aa86;
 }
 
+.modal-dialog {
+    max-width: none;
+}
+
+.show {
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .technology-container {
+        bottom: 200px;
+    }
+}
+
 @media only screen and (max-width: 992px) {
     .about-desc {
         margin-top: 25px;
+    }
+    .technology-container {
+        bottom: 0;
+    }
+    .technology-list li {
+        text-align: left;
+    }
+    .technology-list {
+        margin-bottom: 0;
     }
 }
