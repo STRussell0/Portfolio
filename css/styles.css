@@ -307,6 +307,16 @@ a h5 {
     font-family: "Roboto Slab";
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #77af8d;
+    border: 3px solid #1A2715;
+    border-radius: 10px;
+}
+
 @media only screen and (max-width: 1200px) {
     .technology-container {
         bottom: 200px;
