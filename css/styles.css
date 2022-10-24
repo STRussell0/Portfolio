@@ -190,7 +190,7 @@ p, li, h3 {
     transform: scale(1.05);
 }
 
-.external-link:hover {
+.fa:hover {
     transition: .5s ease;
     transform: translateY(-3px);
 }
@@ -298,5 +298,9 @@ a h5 {
     .project-image {
         margin-top: 15px;
         margin-bottom: 15px;
+    }
+
+    .project-flex-order div:first-child {
+        order: 1;
     }
 }
