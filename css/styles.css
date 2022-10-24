@@ -276,16 +276,6 @@ footer {
     color: #77af8d;
 }
 
-.carousel-caption {
-    position: relative;
-    left: 0;
-    top: 0;
-}
-.size-fix {
-    width: 800px;
-    height: 500px;
-}
-
 h4 {
     color: #fff;
 }
@@ -307,6 +297,14 @@ a h5 {
     justify-content: center;
     align-items: center;
     padding: 10px;
+}
+
+.btn-success {
+    background-color: #64c78b;
+    color: #141815;
+    width: 25%;
+    font-size: var(--fs-md);
+    font-family: "Roboto Slab";
 }
 
 @media only screen and (max-width: 1200px) {
