@@ -140,16 +140,46 @@
     </section>
 
     <!-- PROJECTS SECTION  -->
-
+    <!-- Weather App  -->
     <section class="jumbotron" id="projects">
       <div class="container projects">
         <h2 class="section-title">Projects</h2>
+        <div class="project-row project-flex-order">
+          <div class="col-lg-6 d-flex flex-column">
+            <h3 class="title-hello text-center">Weather App</h3>
+            <div><p class="lead text-center">Weather application that can get current weather statistics based on city name. Has dynamic background image that changes based on city name search.</p></div>
+            <div><h6 style="color:#59a377;">Technologies used:</h6>
+              <ul class="project-technology-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+            <div class="external-link"><a href="https://strussell0.github.io/Weather_App"><i class="fa fa-external-link fa-lg"></i></a></div>
+          </div>
+          <div class="col-lg-6 project-image">
+            <a href="#" data-toggle="modal" data-target="#weatherapp-modal"><img class="img-fluid img-border img-gray" src="./images/weather-app.png" alt="weather app"></a>
+          </div>
+        </div>
+        <div class="modal fade" id="weatherapp-modal" tabindex="-1" role="dialog" aria-labelledby="weatherappLabel" aria-hidden="true">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <img class="img-fluid" src="./images/weather-app.png" alt="full weather app">
+            </div>
+          </div>
+        </div>
         <!-- Magic 8 Ball -->
         <div class="project-row">
           <div class="col-lg-6 project-image">
             <a href="#" data-toggle="modal" data-target="#magic8ball-modal"><img class="img-fluid img-border img-gray" src="./images/magic8ball.png" alt="magic 8 ball"></a>
           </div>
           <div class="modal fade" id="magic8ball-modal" tabindex="-1" role="dialog" aria-labelledby="magic8ballLabel" aria-hidden="true">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <img class="img-fluid" src="./images/magic8ball.png" alt="full magic 8 ball">
@@ -194,6 +224,9 @@
           </div>
         </div>
         <div class="modal fade" id="alertolite-modal" tabindex="-1" role="dialog" aria-labelledby="alertoliteLabel" aria-hidden="true">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <img class="img-fluid" src="./images/alert-o-lite-form.png" alt="full alert o lite form">
@@ -219,6 +252,9 @@
             <div class="external-link"><a href="#"><i class="fa fa-external-link fa-lg"></i></a></div>
           </div>
           <div class="modal fade" id="repair-panel-modal" tabindex="-1" role="dialog" aria-labelledby="repair-panelLabel" aria-hidden="true">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <img class="img-fluid" src="./images/repair-request-backend.png" alt="full repair panel form">
