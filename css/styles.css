@@ -2,6 +2,7 @@ body {
     --nav-height: 80px;
     --fs-sm: 20px;
     --fs-md: 24px;
+    --fs-lg: 30px;
     --fs-heading: 32px;
     padding-top: var(--nav-height);
     height: 100%;
@@ -132,6 +133,8 @@ body {
 }
 
 .section-title {
+    font-family: "Ruda", sans-serif;
+    font-weight: 700;
     display: flex;
     align-items: center;
     position: relative;
@@ -225,6 +228,12 @@ p, li, h3 {
     margin-right: -15px;
     margin-left: -15px;
     margin-top: 100px;
+}
+
+.project-title {
+    color: #59a377;
+    font-size: clamp(var(--fs-md),5vw,var(--fs-lg));
+    font-weight: 700;
 }
 
 .project-technology-list {
