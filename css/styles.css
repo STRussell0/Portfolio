@@ -103,7 +103,7 @@ body {
 }
 
 .title-hello {
-    color: #309156;
+    color: #59a377;
     font-size: clamp(var(--fs-sm),5vw,var(--fs-md));
 }
 
@@ -186,7 +186,7 @@ p, li, h3 {
     display: flex;
     align-items: center;
     position: relative;
-    color: #309156;
+    color: #59a377;
     font-size: clamp(var(--fs-sm),5vw,var(--fs-md));
     width: 100%;
 }
