@@ -333,6 +333,13 @@ a h5 {
     }
 }
 
+@media only screen and (max-width: 615px) {
+    .resume-link {
+        font-size: 12px;
+        padding: .5rem .5rem;
+    }
+}
+
 @media only screen and (max-width: 576px) {
     #title {
        margin-top: 40px;
