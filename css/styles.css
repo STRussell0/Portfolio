@@ -171,6 +171,12 @@ p, li, h3 {
     margin-top: 5rem;
 }
 
+.education-desc, .about-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .tab-pane.active {
     animation: slide-in 1s ease-out;
 }
