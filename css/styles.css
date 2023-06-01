@@ -310,6 +310,15 @@ a h5 {
     font-family: "Roboto Slab";
 }
 
+.external-link-def {
+    color: #59a377;
+    margin-right: 10px;
+}
+
+.external-link-def:hover {
+  color: #fff;  
+}
+
 ::-webkit-scrollbar {
     width: 12px;
 }
