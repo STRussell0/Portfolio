@@ -10,265 +10,392 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
+    <!-- Bootstrap jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <title>Stephen's Portfolio</title>
   </head>
   <body>
 <!-- NAVBAR - Added fixed top to keep it stuck to the top -->
-    <header class="fixed-top">
+    <header>
 
-      <nav class="navbar navbar-expand-sm navbar-dark bg-secondary">
+      <nav id="main-nav" class="navbar navbar-expand-sm navbar-dark">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button id="nav-button" class="navbar-toggler" type="button" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 
           <span class="navbar-toggler-icon"></span>
 
         </button>
 
+        <button onclick="navClose()" id="nav-escape" type="button" class="close hide" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
           <div class="navbar-nav">
-<!-- Put links to IDs used later to navigate to them when pressed -->
-            <a class="nav-item nav-link font-weight-bold" href="#Top">Top</a>
-            <a class="nav-item nav-link font-weight-bold" href="#About">About</a>
-            <a class="nav-item nav-link font-weight-bold" href="#Skills">Skills</a>
-            <a class="nav-item nav-link font-weight-bold" href="#Projects">Projects</a>
-            <!-- <a class="nav-item nav-link font-weight-bold" href="#Contact">Contact</a> -->
-
+              <!-- Put links to IDs used later to navigate to them when pressed -->
+            <a onclick="navClose()" class="nav-size nav-item nav-link font-weight-bold" href="#about">About</a>
+            <a onclick="navClose()" class="nav-size nav-item nav-link font-weight-bold" href="#skills">Experience</a>
+            <a onclick="navClose()" class="nav-size nav-item nav-link font-weight-bold" href="#projects">Projects</a>
+            <a onclick="navClose()" class="nav-size nav-item nav-link font-weight-bold" href="#contact">Contact</a>
           </div>
 
         </div>
-
-        <a class="navbar-brand text-dark font-weight-bold" href="#">S.Russell</a>
+        <div class="resume-link-container">
+          <a class="nav-link font-weight-bold resume-link" href="/Resume-v3.pdf" target="_blank">Download Resume</a>
+        </div>
+        <a class="navbar-brand text-dark font-weight-bold" href="https://strussell0.github.io/Portfolio/"><img class="logo" src="./images/SR-logo-2.png" alt="logo"></a>
 
       </nav>
 
     </header>
 
-    <section class="parallax-1" id="Top"></section>
+    <section class="jumbotron" id="title">
+      <div class="container title-section">
+        <div id="title-animate-1"><h3 class="title-hello">Hello, my name is</h3></div>
+        <div id="title-animate-2" class="mt-4"><h1 class="title-name">Stephen Russell.</h1></div>
+        <div class="mt-2 text-center"><h1 class="title-name subtitle">I am a Web Developer.</h1></div>
+        <div class="ml-auto mt-2 text-right title-desc"><p class="lead">I specialize in crafting dynamic websites, proficient in both front-end and back-end development, with a particular focus on WordPress website and plugin development.</p></div>
+      </div>
+    </section>
 
     <!-- ABOUT ME SECTION  -->
 
-    <section class="jumbotron text-center" id="About">
+    <section class="jumbotron text-center about-me" id="about">
 
-      <div class="container">
+      <div class="container about-section">
 
         <div class="row">
-
+          <h2 class="section-title">About Me</h2>
           <div class="col-md">
-          <img src="./images/profile-1.jpg" alt="Picture of Stephen" id="profile">
-          </div>
-
-          <div class="col-md">
-
-            <div class="tab-content" id="nav-tabContent">
-              <h1 class="display-4"><strong>Stephen Russell</strong></h1>
-              <p class="lead">A rising LAMP stack WordPress developer with 1.5 years of experience in WordPress website creation and plug-in implementation.
-                Experience working with a pod of developers, designers, and managers that utilized the Scrum framework when
-                working on projects for clients.</p>
-              <div class="row">
-                <div class="about-me col-4">
-                  <ul class="about-me-list-left">
-                    <li><strong>Age</strong></li>
-                    <li><strong>Location</strong></li>
-                    <li><strong>Email</strong></li>
-                    <li><strong>Hobbies</strong></li>
-                  </ul>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="img-fluid img-border" src="./images/tournament-victory.jpg" alt="Picture of Stephen" id="profile">
                 </div>
-                <div class="col-6">
-                  <ul class="about-me-list">
-                    <li>32</li>
-                    <li>Fresno, CA</li>
-                    <li>stephenrussell2008@gmail.com</li>
-                    <li>Gaming, Dance Dance Revolution, Fantasy Novels</li>
-                  </ul>
+                <div class="carousel-item">
+                  <img class="img-fluid img-border" src="./images/camaraderie.jpg" alt="Picture of Stephen" id="profile">
                 </div>
               </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
-        </div>
-
+          </div>
+          <div class="col-lg about-desc">
+            <p class="lead">My name is Stephen and I make websites for a living!</p>
+            <p class="lead">I believe that collaboration with others is the key to greatness. I aspire to learn and grow from the challenges that the tech industry can bring.</p>
+            <p class="lead">In my free time I am an avid rhythm gamer, specifically very competitive with Dance Dance Revolution. I also have strong interests in card games such as MTG and Hearthstone. 
+            </p>
+          </div>
+       </div>
       </div>
-
     </section>
 
-    <!-- THIS IS THE 2ND PARALLAX -->
+    <!-- EDUCATION  -->
 
-    <section class="parallax-2"></section>
+    <section class="jumbotron text-center about-me" id="about">
 
-    <!-- SKILLS SECTION  -->
+      <div class="container about-section">
 
-    <section class="jumbotron" id="Skills">
+        <div class="row">
+          <h2 class="section-title">Education</h2>
+          <div class="col-lg education-desc">
+            <p class="lead">In April 2021, I enrolled in web development courses offered by Bitwise Industries, focusing on HTML/CSS and mobile responsiveness. Subsequently, I was selected for Bitwise's prestigious apprenticeship program, where I honed my skills as a WordPress developer.</p>
+            <p class="lead">During the apprenticeship, I gained hands-on experience in developing and designing websites and plugins for WordPress, utilizing JavaScript, PHP, and jQuery. This immersive learning experience allowed me to apply my technical knowledge in real-world projects.</p>
+            <p class="lead">After completing the apprenticeship with Alphaworks, I transitioned into a full-time role as a Software Developer at Bitwise Industries, where I continued to contribute and grow in a dynamic tech environment.</p>
+            <p class="lead">Currently, I am actively seeking new opportunities and am open to exploring positions that align with my skills and interests.</p>
+          </div>
+          <div class="col-md">
+            <img class="img-fluid img-border" src="./images/profile-1.jpg" alt="Picture of Stephen" id="profile">
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <h1 class="display-4 pb-4 text-center"><strong>Experience</strong></h1>
+    <!-- EXPERIENCE SECTION  -->
 
-      <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators bg-dark">
-          <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container" style="margin-bottom: 5rem;">
-              <div class="row">   
-                <div class="col-xl-6 col-md">
-                  <img src="./images/Experience.png" alt="Skill Logos" class="img-fluid">
-                </div>
-                <div class="col-md">
-                  <ul class="skills-list">
-                    <li><b>Wordpress Plugin Development</b></li>
-                    <li><b>PHP</b></li>
-                    <li><b>Javascript</b></li>
-                    <li><b>HTML</b></li>
-                    <li><b>CSS</b></li>
+    <section class="jumbotron experience" id="skills">
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <h2 class="section-title">Experience</h2>
+          <div>
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-item nav-link active" data-toggle="tab" href="#ace">American College of Education</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item nav-link" data-toggle="tab" href="#bitwise">Bitwise Industries</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item nav-link" data-toggle="tab" aria-current="page" href="#alpha_works">Alpha Works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item nav-link" data-toggle="tab" href="#brownie_baker">Brownie Baker</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div id="ace" class="tab-pane active container mt-3">
+                <p class="lead">Front-End Web Developer</p>
+                <p class="lead">Engaged in the continuous improvement of the main college website, collaborating with stakeholders to identify and implement requested features by utilizing an internal API to dynamically display relevant data.</p>
+                  <p class="lead">July 2023 - Present</p>
+                  <ul class="job-duties">
+                    <li>Oversaw maintenance and optimization of main collge website.</li>
+                    <li>Collaborated with IT team to extract and present oData on website frontend.</li>
+                    <li>Collaborated closely with the marketing team to integrate requested features aimed at enhancing student engagement and optimizing the site's user experience for seamless navigation.</li>
                   </ul>
-                </div>
+              </div>
+              <div id="bitwise" class="tab-pane container mt-3">
+                <p class="lead">Software Developer</p>
+                <p class="lead">Served as a software developer for Bitwise Industries, a company that creates technology solutions in digital product development by leveraging a diverse workforce from underestimated backgrounds.</p>
+                  <p class="lead">Nov 2022 - May 2023</p>
+                  <ul class="job-duties">
+                    <li>Developed and designed many websites with Wordpress</li>
+                    <li>Used a combination of JavaScript, jQuery, PHP, and the Bootstrap framework to create plugins for Wordpress websites</li>
+                    <li>Participated in sprints that used Scrum</li>
+                  </ul>
+              </div>
+              <div id="alpha_works" class="tab-pane container mt-3">
+                <p class="lead">Wordpress Dev Apprentice</p>
+                <p class="lead">Received on-the-job training for Wordpress development with AlphaWorks, a subsidiary of Bitwise Industries that specializes in giving people looking to break into the tech industry.</p>
+                  <p class="lead">June 2021 - Nov 2022</p>
+                  <ul class="job-duties">
+                    <li>Studied PHP and JavaScript under senior developers</li>
+                    <li>Worked with apprentice lead to share knowledge with other apprentices</li>
+                    <li>Co-taught classes that brought up other students looking to pursue knowledge in web development</li>
+                  </ul>
+              </div>
+              <div id="brownie_baker" class="tab-pane container mt-3">
+                <p class="lead">Quality Control Manager</p>
+                <p class="lead">Managed food safety at The Brownie Baker, a wholesale manufacturer, specializing in the distribution of prepackaged pastries.</p>
+                  <p class="lead">June 2016 - June 2021</p>
+                  <ul class="job-duties">
+                    <li>Managed a team of quality technicians</li>
+                    <li>Ensured products were safe by testing for pathogens, pH levels, water activity and moisture levels</li>
+                  </ul>
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="carousel-caption d-none d-md-block bg-dark">
-              <h5>Scrum is a simple framework for effective team collaboration on complex software projects.</h5></a>
-            </div>
-            <img class="d-block w-100" src="./images/Scrum_Framework.png" alt="Second slide">
-          </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
-
-      <!-- <div class="container">
-
-        <h1 class="display-4 pb-4 text-center"><strong>Experience</strong></h1>
-
-        <div class="row">
-
-          <div class="col-xl-6 col-md">
-            <img src="./images/Experience.png" alt="Skill Logos" class="img-fluid">
-          </div>
-
-          <div class="col-md">
-            <ul class="skills-list">
-              <li><b>Wordpress Plugin Development</b></li>
-              <li><b>PHP</b></li>
-              <li><b>Javascript</b></li>
-              <li><b>HTML</b></li>
-              <li><b>CSS</b></li>
-            </ul>
-          </div>
-
-        </div>
-
-      </div> -->
-
-      <hr>
 
     </section>
 
     <!-- PROJECTS SECTION  -->
-
-    <section class="jumbotron" id="Projects">
-
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators bg-dark">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="carousel-caption d-none d-md-block bg-dark">
-              <a target="_blank" href="https://strussell0.github.io/magic8ball/"><h5>Magic 8 Ball</h5></a>
-                <h4>Javascript course final project.</h4>
+    <!-- Weather App  -->
+    <section class="jumbotron" id="projects">
+      <div class="container projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-row project-flex-order">
+          <div class="col-lg-6 d-flex flex-column">
+            <h3 class="project-title text-center">Weather App</h3>
+            <div><p class="lead text-center">Weather application that can get current weather statistics based on city name. Has dynamic background image that changes based on city name search.</p></div>
+            <div><h6 style="color:#59a377;">Technologies used:</h6>
+              <ul class="project-technology-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
             </div>
-            <img class="d-block w-100" src="./images/magic8ball.png" alt="First slide">
+            <div class="external-link">
+              <a class="external-link-def" href="https://strussell0.github.io/Weather_App" target="_blank"><i class="fa fa-external-link fa-lg"></i> Site</a>
+              <a class="external-link-def" href="https://github.com/STRussell0/Weather_App" target="_blank"><i class="fa fa-external-link fa-lg"></i> Repo</a>
+            </div>
           </div>
-          <div class="carousel-item">
-            <div class="carousel-caption d-none d-md-block bg-dark">
-              <h5>Alert O Lite Repair Form</h5>
-              <h4>Repair Request form that sends data to the backend that the admin can then approve/deny and set pricing.</h4>
-            </div>
-            <img class="d-block w-100" src="./images/alert-o-lite-form.png" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-caption d-none d-md-block bg-dark">
-              <h5>Repair Form Backend</h5>
-              <h4>Admin panel that you can approve or deny via bulk actions and set pricing of repair requests.</h4>
-            </div>
-            <img class="d-block w-100" src="./images/repair-request-backend.png" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-caption d-none d-md-block bg-dark">
-              <h5>Gigsite Sponsor Ads</h5>
-              <h4>Created service to allow client sponsors curated ads to appear based on search results.</h4>
-            </div>
-            <img class="d-block w-100 size-fix" src="./images/sponsorresults.png" alt="Third slide">
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-caption d-none d-md-block bg-dark">
-              <a target="_blank" href="https://github.com/general-repositories/pdf2db"><h5>Gigsite PDF Parser</h5></a>
-              <h4>PDF Parser that will allow uploaded intern resume PDF contents to be searchable.</h4>
-            </div>
-            <img class="d-block w-100" src="./images/PDF_Parser.png" alt="Fourth slide">
+          <div class="col-lg-6 project-image">
+            <a href="#" data-toggle="modal" data-target="#weatherapp-modal"><img class="img-fluid img-border img-gray" src="./images/weather-app.png" alt="weather app"></a>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+        <div class="modal fade" id="weatherapp-modal" tabindex="-1" role="dialog" aria-labelledby="weatherappLabel" aria-hidden="true">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <img class="img-fluid" src="./images/weather-app.png" alt="full weather app">
+            </div>
+          </div>
+        </div>
+        <!-- Magic 8 Ball -->
+        <div class="project-row">
+          <div class="col-lg-6 project-image">
+            <a href="#" data-toggle="modal" data-target="#magic8ball-modal"><img class="img-fluid img-border img-gray" src="./images/magic8ball.png" alt="magic 8 ball"></a>
+          </div>
+          <div class="modal fade" id="magic8ball-modal" tabindex="-1" role="dialog" aria-labelledby="magic8ballLabel" aria-hidden="true">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <img class="img-fluid" src="./images/magic8ball.png" alt="full magic 8 ball">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex flex-column">
+            <div><h3 class="project-title text-center">Magic 8 Ball</h3></div>
+            <div><p class="lead text-center">Final project for JavaScript course taken in June of 2021.</p></div>
+            <div><h6 style="color:#59a377;">Technologies used:</h6>
+              <ul class="project-technology-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Bootstrap</li>
+              </ul>
+            </div>
+            <div class="external-link">
+              <a class="external-link-def" target="_blank" href="https://strussell0.github.io/magic8ball/"><i class="fa fa-external-link fa-lg"></i> Site</a>
+              <a class="external-link-def" target="_blank" class="external-link-def" href="https://github.com/STRussell0/Weather_App" target="_blank"><i class="fa fa-external-link fa-lg"></i> Repo</a>
+            </div>
+          </div>
+        </div>
+        <!-- Alert o Lite Form  -->
+        <div class="project-row project-flex-order">
+          <div class="col-lg-6 d-flex flex-column">
+            <h3 class="project-title text-center">Alert-o-Lite Form</h3>
+            <div><p class="lead text-center">Repair/Request form that sends data to the backend that the admin can then approve/deny. This will trigger emails to be sent to the customer to inform them of the result and possibly send an invoice to be paid through WooCommerce.</p></div>
+            <div><h6 style="color:#59a377;">Technologies used:</h6>
+              <ul class="project-technology-list">
+                <li>HTML</li>
+                <li>SASS</li>
+                <li>PHP</li>
+                <li>Wordpress</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+                <li>Bootstrap</li>
+                <li>AJAX</li>
+              </ul>
+            </div>
+            <!-- <div class="external-link"><a href="#"><i class="fa fa-external-link fa-lg"></i></a></div> -->
+          </div>
+          <div class="col-lg-6 project-image">
+            <a href="#" data-toggle="modal" data-target="#alertolite-modal"><img class="img-fluid img-border img-gray" src="./images/alert-o-lite-form.png" alt="alert o lite form"></a>
+          </div>
+        </div>
+        <div class="modal fade" id="alertolite-modal" tabindex="-1" role="dialog" aria-labelledby="alertoliteLabel" aria-hidden="true">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <img class="img-fluid" src="./images/alert-o-lite-form.png" alt="full alert o lite form">
+            </div>
+          </div>
+        </div>
+        <!-- Alert o Lite Repair Panel  -->
+        <div class="project-row">
+          <div class="col-lg-6 project-image">
+            <a href="#" data-toggle="modal" data-target="#repair-panel-modal"><img class="img-fluid img-border img-gray" src="./images/repair-request-backend.png" alt="alert o lite repair panel"></a>
+          </div>
+          <div class="col-lg-6 d-flex flex-column">
+            <div><h3 class="project-title text-center">Repair Request Admin Panel</h3></div>
+            <div><p class="lead text-center">Admin panel that you can approve or deny via bulk actions and set pricing of repair requests.</p></div>
+            <div><h6 style="color:#59a377;">Technologies used:</h6>
+              <ul class="project-technology-list">
+                <li>PHP</li>
+                <li>Wordpress</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+              </ul>
+            </div>
+            <!-- <div class="external-link"><a href="#"><i class="fa fa-external-link fa-lg"></i></a></div> -->
+          </div>
+          <div class="modal fade" id="repair-panel-modal" tabindex="-1" role="dialog" aria-labelledby="repair-panelLabel" aria-hidden="true">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <img class="img-fluid" src="./images/repair-request-backend.png" alt="full repair panel form">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Interactive Map -->
+        <div class="project-row project-flex-order">
+          <div class="col-lg-6 d-flex flex-column">
+            <h3 class="project-title text-center">Interactive Map Data</h3>
+            <div><p class="lead text-center">Implemented a dynamic data integration solution that leverages an internal API to retrieve and display relevant information on an interactive map. I designed the system to restructure the incoming data for optimal usability, and configured a cron job to regularly check for data updates, ensuring the displayed information remains current and accurate.</p></div>
+            <div><h6 style="color:#59a377;">Technologies used:</h6>
+              <ul class="project-technology-list">
+                <li>HTML</li>
+                <li>SASS</li>
+                <li>PHP</li>
+                <li>Wordpress Cron Job</li>
+                <li>API Fetching</li>
+              </ul>
+            </div>
+            <div class="external-link">
+              <a class="external-link-def" href="https://ace.edu/tuition-and-admissions/licensure/" target="_blank"><i class="fa fa-external-link fa-lg"></i> Site</a>
+            </div>
+          </div>
+          <div class="col-lg-6 project-image">
+            <a href="#" data-toggle="modal" data-target="#interactive-map-modal"><img class="img-fluid img-border img-gray" src="./images/interactive-map-data.png" alt="alert o lite form"></a>
+          </div>
+        </div>
+        <div class="modal fade" id="interactive-map-modal" tabindex="-1" role="dialog" aria-labelledby="interactive-mapLabel" aria-hidden="true">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <img class="img-fluid" src="./images/interactive-map-data.png" alt="full alert o lite form">
+            </div>
+          </div>
+        </div>
+        <!-- Grant Calc -->
+        <div class="project-row">
+          <div class="col-lg-6 project-image">
+            <a href="#" data-toggle="modal" data-target="#grant-calc-modal"><img class="img-fluid img-border img-gray" src="./images/grant-calc.png" alt="magic 8 ball"></a>
+          </div>
+          <div class="modal fade" id="grant-calc-modal" tabindex="-1" role="dialog" aria-labelledby="grant-calcLabel" aria-hidden="true">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <img class="img-fluid" src="./images/grant-calc.png" alt="full magic 8 ball">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex flex-column">
+            <div><h3 class="project-title text-center">Grant Calculator</h3></div>
+            <div><p class="lead text-center">Integrated an internal API to dynamically inject conditional data into a form that calculates grant savings for students.</p></div>
+            <div><h6 style="color:#59a377;">Technologies used:</h6>
+              <ul class="project-technology-list">
+                <li>Gravity Forms</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>API Fetching</li>
+              </ul>
+            </div>
+            <div class="external-link">
+              <a class="external-link-def" target="_blank" href="https://ace.edu/tuition-and-admissions/grants-scholarships/"><i class="fa fa-external-link fa-lg"></i> Site</a>
+            </div>
+          </div>
+        </div>
       </div>
-
     </section>
-
-    <!-- THIS IS THE THIRD PARALLAX -->
-
-    <!-- <section class="parallax-3"></section> -->
 
     <!-- CONTACT SECTION  -->
 
-    <!-- <section class="jumbotron" id="Contact">
-
-      <hr>
-
-      <h1 class="display-4 pb-5 text-center"><strong>Contact</strong></h1>
-
-    <form>
-
-      <div class="form-row">
-
-        <div class="form-group col-md-6">
-          <label for="Name">Name</label>
-          <input type="text" class="form-control" id="Name" placeholder="Name">
+    <section class="jumbotron" id="contact">
+      <div class="container d-flex flex-column align-items-center justify-content-center">
+        <div class="col-lg-6 d-flex flex-column align-items-center">
+          <h2 class="section-title">Contact</h2>
+          <p class="lead text-center">I am currently looking for work, so please do not hesitate to contact me!</p>
+          <a class="btn btn-success" href="mailto:stephenrussell2008@gmail.com">Hello!</a>
         </div>
-        
-        <div class="form-group col-md-6">
-          <label for="Email">Email</label>
-          <input type="email" class="form-control" id="Email" placeholder="Email">
-        </div>
-
       </div>
-
-      <div class="form-group">
-        <label for="Message">Message</label>
-        <textarea class="form-control" id="Message" rows="3"></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-dark">Submit</button>
-
-    </form>
-
-    </section> -->
+    </section>
 
     <footer>
       <h4>&copy; Stephen Russell 2022</h4>
@@ -279,7 +406,63 @@
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script>
+      let navButton = document.getElementById('nav-button');
+      let navMenu = document.getElementById('navbarNavAltMarkup');
+      let mainNav = document.getElementById('main-nav');
+      let navEscape = document.getElementById('nav-escape');
+      let navSize = document.querySelector('.navbar-nav');
+
+      function navClose () {
+        navMenu.classList.remove('show');
+        mainNav.style = 'height: var(--nav-height)';
+        navEscape.classList.add('hide');
+        navButton.classList.remove('hide');
+        document.documentElement.style ='overflow: visible';
+        document.body.style = 'overflow: visible';
+        navSize.style = 'font-size: 14px';
+      }
+
+      navButton.addEventListener('click', () => {
+        navMenu.classList.add('show');
+        mainNav.style = 'height: 100%!important';
+        navButton.classList.add('hide');
+        navEscape.classList.remove('hide');
+        document.documentElement.style ='overflow: hidden';
+        document.body.style = 'overflow: hidden';
+        navSize.style = 'font-size: 28px';
+      });
+
+      // Scroll Reveal Library 
+      window.sr = ScrollReveal();
+      sr.reveal('.about-me');
+      sr.reveal('.experience');
+      sr.reveal('.projects');
+      // Add smooth transition to anchor tags
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+              e.preventDefault();
+              document.querySelector(this.getAttribute('href')).scrollIntoView({
+                  behavior: 'smooth'
+              });
+          });
+      });
+      // Make nav bar hide when scrolling down and reappear when scrolling up
+      const nav = document.querySelector(".navbar");
+      let lastScrollY = window.scrollY;
+      window.addEventListener("scroll", () => {
+        if (lastScrollY < window.scrollY) {
+          console.log("Hello");
+          nav.classList.add("nav--hidden");
+        } else {
+          console.log ("Goodbye");
+          nav.classList.remove("nav--hidden");
+        }
+
+        lastScrollY = window.scrollY;
+      });
+
         $('.navbar-collapse a').click(function(){
             $(".navbar-collapse").collapse('hide');
         });
